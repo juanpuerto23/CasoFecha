@@ -26,4 +26,8 @@ public class Fecha {
     public int getMes() {
         return mes;
     }
+    public String toString()
+    {
+        return dia + "/" + mes + "/" + anio;
+    }
 }

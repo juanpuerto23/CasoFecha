@@ -12,6 +12,7 @@ public class Test {
         System.out.println("Dia: " + f.getDia());
         System.out.println("Mes: " + f.getMes());
         System.out.println("Año: " + f.getAnio());
+        System.out.println(f);
     }
     
 }
