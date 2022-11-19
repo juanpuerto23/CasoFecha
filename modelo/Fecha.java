@@ -2,10 +2,12 @@ package modelo;
 
 public class Fecha {
 
+    public static final String MONTH = null;
+    public static final String YEAR = null;
     // Atributos
-    private int dia;
-    private int mes;
-    private int anio;
+    protected int dia;
+    protected int mes;
+    protected int anio;
 
     // Metodos
     // Constructor con 3 parametros
@@ -75,5 +77,29 @@ public class Fecha {
     public boolean equals(Object o){
         Fecha otra = (Fecha)o;
         return (dia==otra.dia) && (mes == otra.mes) && (anio == otra.anio);
+    }
+
+    public void addDias(int d)
+    {
+        int sum = fechaToDias() + d;
+        diasToFecha(sum);
+    }
+    private int fechaToDias()
+    {
+        return anio * 360 + mes * 30 + dia;
+    }
+    private void diasToFecha(int i)
+    {
+        anio = (int)(i/360);
+        mes = (int)((i%360)/30);
+        dia = (int)((i%30));
+    }
+
+    public static Fecha getInstance() {
+        return null;
+    }
+
+    public int get(String year2) {
+        return 0;
     }
 }

@@ -30,5 +30,10 @@ public class Test {
         if (otra.equals(f) == true) {
             System.out.println("Las dos fechas son iguales");
         }
+
+        System.out.println("Punto 4");
+        Fecha f4 = new Fecha("23/12/1980");
+        f4.addDias(180);
+        System.out.println(f4);
     }
 }
